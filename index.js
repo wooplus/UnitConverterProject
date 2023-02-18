@@ -14,6 +14,15 @@ let massEl = document.querySelector("#mass-desc");
 
 reset();
 
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    inputValue = Number(input.value);
+    lengthConversion(inputValue);
+    volumeConversion(inputValue);
+    massConversion(inputValue);
+  }
+});
+
 convertBtn.addEventListener("click", () => {
   inputValue = Number(input.value);
   lengthConversion(inputValue);
